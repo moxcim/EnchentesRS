@@ -41,25 +41,37 @@ h3 {
 }
 
 .body_right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    min-width: 100%;
-    min-height: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
     max-height: 100%;
-    max-width: 100%;
+    margin-right: 50px;
+
+}
+
+.corp1 {
+    display: flex;
+    align-items: center;
+}
+
+.corp2 {
+    display: flex;
+    align-items: center;
 }
 
 .img1 {
     margin-left: 20%;
     max-width: 80%;
     max-height: 100%;
+    border-radius: 5px;
+    margin-bottom: 3%;
 }
 
 .img2 {
     margin-left: 20%;
     max-width: 80%;
     max-height: 100%;
+    border-radius: 5px;
+    margin-bottom: 50px;
 }
 
 .body_left {
@@ -88,6 +100,7 @@ h3 {
     background-color: black;
     color: rgb(233, 233, 233);
     text-align: center;
+    border-radius: 5px;
 }
 
 .b2 {
@@ -97,6 +110,7 @@ h3 {
     color: rgb(233, 233, 233);
     width: 30vw;
     height: 10vh;
+    border-radius: 5px;
 }
 
 .divisoria {
@@ -119,8 +133,11 @@ h3 {
 
 .mapa {
     justify-self: center;
-    border: black;
+    
     border-style: solid;
+    border-width: 10px;
+    border-radius: 5px;
+
     width: 50%;
     margin-top: 30px;
     margin-bottom: 50px;
