@@ -15,7 +15,7 @@
 }
 
 .body::-webkit-scrollbar-thumb {
-    background-color: #4f0000;
+    background-color: burlywood;
     border: solid #63050f;
     border-radius: 15px;
     width: 6px;
@@ -24,31 +24,49 @@
 
 .cabecalho {
     display: flex;
+    flex-direction: row;
 
     background-color: #4f0000;
     color:burlywood;
 
+    width: 100%;
     min-height: 30px;
-    height: 5vh;
+    height: 6vh;
 
     align-items: center;
+    justify-content:space-between;
+}
+
+.coerg {
+    padding-left: 1vw;
 }
 
 .txt_cab {
-    color:burlywood;
     margin: 0;
-    margin-left: 1vw;
-    font-size: calc(1.2vw + 0.7vh);
+    color:burlywood;
+    font-size: calc(1.4vw + 0.9vh);
     letter-spacing: 6px;
 
     -webkit-transition: 0ms;
     transition: 250ms;
-    
 }
 .txt_cab:hover {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: burlywood;
     color: #63050f;
+}
+
+.options {
+    display: flex;
+
+    position: relative;
+    justify-self: right;
+    background-color: burlywood;
+
+    margin-right: 1vw;
+
+    height: 3vh;
+    width: 3vh;
 }
 
 .top1 {
@@ -181,8 +199,15 @@
 
 }
 .imagem1 {
-    position:relative;
     max-width: 22vw;
+    border-radius: 5px;
+    -webkit-transition: 0ms;
+    transition: 250ms;
+    cursor: pointer;
+}
+.imagem1:hover {
+    max-width: 23vw;
+    border-radius: 20px;
 }
 
 .txt1 {
@@ -197,6 +222,12 @@
 .texto1 {
     font-size: calc(1vw + 1vh);
     text-align: justify;
+    -webkit-transition: 0ms;
+    transition: 250ms;
+}
+.texto1:hover {
+    font-weight: 600;
+    text-align: center;
 }
 
 .bottom_container3 {
@@ -208,8 +239,21 @@
 .txt2 {
     display: flex;
 
+    justify-content: center;
+    align-items: center;
+
     width: 40vw;
     padding: 2vw;
+}
+.texto2 {
+    font-size: calc(1vw + 1vh);
+    text-align: justify;
+    -webkit-transition: 0ms;
+    transition: 250ms;
+}
+.texto2:hover {
+    font-weight: 600;
+    text-align: center;
 }
 
 .img2 {
@@ -221,10 +265,50 @@
     width: 30vw;
     padding: 2vw;
 }
+
 .imagem2 {
-    
+    max-width: 20vw;
+    border-radius: 5px;
+    -webkit-transition: 0ms;
+    transition: 250ms;
+    cursor: pointer;
+}
+.imagem2:hover {
+    max-width: 21vw;
+    border-radius: 20px;
 }
 
+.saiba_mais {
+    font-family: 'Teachers', sans-serif;
+    font-size: calc(1.5vw + 1vh);
+    letter-spacing: 10px;
+    font-weight: 600;
+
+    border: 2px solid;
+    border-radius: 10px 10px;
+
+    margin-top: 15vh;
+    width: 25vw;
+    height: 10vh;
+
+    background-color: #63050f;
+    color: burlywood;
+
+    -webkit-transition: 0ms;
+    transition: 250ms;
+
+    cursor: pointer;
+}
+
+.saiba_mais:hover {
+    border-width: 6px;
+    border-radius: 10px 10px;
+
+    box-shadow: #1d0000 0px 0px 20px;
+    border-color: #63050f;
+
+    font-weight: 900;
+}
 
 
 @media (max-width: 600px) {
@@ -236,7 +320,6 @@
         transition: 250ms;
     }
     .txt_cab:hover {
-        margin-left: 2vw;
         letter-spacing: 6px;
     }
 
@@ -293,5 +376,57 @@
     }
     .brasao:hover {
         width: 41vw;
+    }
+
+    .container3 {
+        display: flex;
+        flex-direction: column;
+    
+        background-color: #63050f;
+        height: 110vh;
+        width: 80vw;
+        border-radius: 5px;
+    
+        margin-top: 3vh;
+    }
+
+    .top_container3 {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        height: 50vh;
+    }
+
+    .imagem1{
+        max-width: 50vw;
+    }
+    .imagem1:hover{
+        max-width: 51vw;
+    }
+    .texto1{
+        text-align: center;
+    }
+
+    .bottom_container3 {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        height: 50vh;
+    }
+
+    .texto2{
+        text-align: center;
+    }
+    .imagem2{
+        max-width: 50vw;
+    }
+    .imagem2:hover{
+        max-width: 51vw;
     }
 }
