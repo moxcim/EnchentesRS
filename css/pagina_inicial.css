@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
+a {
+    text-decoration: none;
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -25,6 +29,7 @@
 .cabecalho {
     display: flex;
     flex-direction: row;
+    position: fixed;
 
     background-color: #4f0000;
     color:burlywood;
@@ -39,6 +44,7 @@
 
 .coerg {
     padding-left: 1vw;
+    cursor:default;;
 }
 
 .txt_cab {
@@ -56,18 +62,67 @@
     color: #63050f;
 }
 
-.options {
-    display: flex;
-
-    position: relative;
-    justify-self: right;
-    background-color: burlywood;
-
-    margin-right: 1vw;
-
-    height: 3vh;
-    width: 3vh;
+.menu {
+    --s: 3vh; /* control the size */
+  --c: burlywood; /* the color */
+  
+  height: var(--s);
+  aspect-ratio: 1;
+  border: 0;
+  border-inline: calc(var(--s)/2) solid #0000; 
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+         no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+         repeat-y content-box border-box;
+  background: 
+    var(--_g2) left  var(--_p,0px) top,
+    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+    var(--_g2) right var(--_p,0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+  background-size: 
+    20% 80%,
+    40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+  cursor: pointer;
+  transition: 
+    background-position .3s var(--_s,.3s), 
+    clip-path 0s var(--_s,.6s);
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
 }
+.menu:before,
+.menu:after {
+  content:"";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform .3s calc(.3s - var(--_s,.3s));
+  
+}
+.menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--s));
+    --_s: 0s;
+  }
+  .menu:checked:before {
+    transform: rotate(45deg);
+  }
+  .menu:checked:after {
+    transform: rotate(-45deg);
+  }
+  .menu:focus-visible {
+    clip-path: none;
+    -webkit-mask: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
+  }
+
 
 .top1 {
     display: flex;
@@ -164,6 +219,8 @@
     transition: 250ms;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: burlywood;
+
+    cursor: default;
 }
 .sobre:hover {
     letter-spacing: 10px;
@@ -328,6 +385,7 @@
         flex-direction: column;
 
         align-items: center;
+        justify-content: space-evenly;
     
         height: 95vh;
     }
@@ -378,12 +436,16 @@
         width: 41vw;
     }
 
+    .top2 {
+        height: 160vh;
+    }
+
     .container3 {
         display: flex;
         flex-direction: column;
     
         background-color: #63050f;
-        height: 110vh;
+        height: 120vh;
         width: 80vw;
         border-radius: 5px;
     
@@ -398,6 +460,7 @@
         justify-content: center;
 
         height: 50vh;
+        margin-top: 2vh;
     }
 
     .imagem1{
@@ -428,5 +491,46 @@
     }
     .imagem2:hover{
         max-width: 51vw;
+    }
+
+    .sobre {
+        font-size: calc(5vw + 4vh);
+        letter-spacing: 6px;
+    }
+    .sobre:hover {
+        letter-spacing: 15px;
+    }
+
+    .saiba_mais {
+        font-family: 'Teachers', sans-serif;
+        font-size: calc(2vw + 1vh);
+        letter-spacing: 10px;
+        font-weight: 600;
+    
+        border: 2px solid;
+        border-radius: 10px 10px;
+    
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+        width: 50vw;
+        height: 10vh;
+    
+        background-color: #63050f;
+        color: burlywood;
+    
+        -webkit-transition: 0ms;
+        transition: 250ms;
+    
+        cursor: pointer;
+    }
+    
+    .saiba_mais:hover {
+        border-width: 6px;
+        border-radius: 10px 10px;
+    
+        box-shadow: #1d0000 0px 0px 20px;
+        border-color: #63050f;
+    
+        font-weight: 900;
     }
 }
