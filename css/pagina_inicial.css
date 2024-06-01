@@ -47,6 +47,44 @@ a {
     cursor:default;;
 }
 
+.drop {
+    position: fixed;
+
+    padding-top: 10px;
+
+    height: 50vh;
+    width: 15vw;
+
+    right: 0;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 44vh;
+
+    align-items: flex-end;
+    
+    margin-top: 6vh;
+}
+
+.btn {
+    font-family: 'Teachers', sans-serif;
+    font-weight: 900;
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    background-color: transparent;
+    border: 0px;
+    margin-bottom: 10px;
+    color: burlywood;
+    width: 5vw;
+}
+
+
 .txt_cab {
     margin: 0;
     color:burlywood;
