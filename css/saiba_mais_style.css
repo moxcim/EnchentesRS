@@ -10,7 +10,7 @@ a {
 
     font-family: 'Teachers', sans-serif;
 
-    background-color: #4f0000;
+    background-color: #63050f;
     color:burlywood;
 }
 
@@ -124,21 +124,90 @@ a {
 }
 
 .corpo {
-    padding-top: 6vh;
-    height: 94vh;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 6vh;
+  height: 94vh;
+
+}
+
+.title1 {
+  display: flex;
+
+  height: 12vh;
+  width: 100%;
+  margin-bottom: 6vh;
+  padding-top: 3vh;
+
+  justify-content: center;
+}
+
+.ajude {
+  color: #63050f;
+  font-size: calc(4vw + 3vh);
+  margin: 0;
+  -webkit-transition: 0ms;
+  transition: 250ms;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: burlywood;
+
+  cursor: default;
+}
+.ajude:hover {
+  letter-spacing: 10px;
+  color: burlywood;
+}
+
+.doacoes {
+  display: flex;
+  flex-direction: row;
+
+  width: 90vw;
+  height: 80vh;
+
+  align-self: center;
+}
+
+.doa {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  width: 30vw;
+}
+
+.QR {
+  height: 20vw;
+  border-radius: 5px;
+
+  -webkit-transition: 0ms;
+  transition: 300ms;
+}
+
+.QR:hover {
+  box-shadow: #3b0000 0px 0px 40px;
 }
 
 
-
 @media (max-width: 600px) {
-    .txt_cab {
-        margin-left: 4vw;
-        font-size: calc(2vw + 1.5vh);
-    
-        -webkit-transition: 0ms;
-        transition: 250ms;
-    }
-    .txt_cab:hover {
-        letter-spacing: 6px;
-    }
+  .txt_cab {
+      margin-left: 4vw;
+      font-size: calc(2vw + 1.5vh);
+  
+      -webkit-transition: 0ms;
+      transition: 250ms;
+  }
+  .txt_cab:hover {
+      letter-spacing: 6px;
+  }
+
+  .ajude {
+    font-size: calc(5vw + 4vh);
+    letter-spacing: 6px;
+  } 
+  .ajude:hover {
+      letter-spacing: 15px;
+  }
 }

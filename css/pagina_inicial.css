@@ -284,7 +284,6 @@ a {
 }
 .texto1:hover {
     font-weight: 600;
-    text-align: center;
 }
 
 .bottom_container3 {
@@ -310,7 +309,6 @@ a {
 }
 .texto2:hover {
     font-weight: 600;
-    text-align: center;
 }
 
 .img2 {
@@ -368,7 +366,7 @@ a {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .txt_cab {
         margin-left: 4vw;
         font-size: calc(2vw + 1.5vh);
@@ -470,7 +468,7 @@ a {
         max-width: 51vw;
     }
     .texto1{
-        text-align: center;
+
     }
 
     .bottom_container3 {
@@ -484,7 +482,7 @@ a {
     }
 
     .texto2{
-        text-align: center;
+
     }
     .imagem2{
         max-width: 50vw;
