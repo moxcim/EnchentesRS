@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/pagina_inicial.css">
     </head>
 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
     <body class="body">
         <div class="cabecalho">
             <div class="coerg">
@@ -16,16 +18,18 @@
             </div>
 
             <div class="options">
-                <input type="checkbox" class="menu" role="button">
+                <button onclick="onClick()" class="menu" id="menu"></button> 
             </div>
         </div>
 
-        <div class="drop">
+        <div class="drop" id="drop">
             <div class="items">
-                <button onclick="" class="btn" id="btn1">SOBRE</button>
-                <button onclick="" class="btn" id="btn2">AJUDE</button>
+                <button class="btn">SOBRE</button>
+                <button class="btn">AJUDE</button>
             </div>
         </div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
         <div class="top1">
             <div class="container1">
@@ -37,6 +41,8 @@
                 <img src="imagens/brasao.webp" alt="" class="brasao">
             </div>
         </div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
         <div class="top2">
             <div class="titulo">
@@ -71,6 +77,8 @@
                 <a href="saiba_mais.html"><button class="saiba_mais">SAIBA MAIS</button></a>
             </div>
         </div>
+
+        <script src="script.js"></script>
     </body>
 
 </html>
