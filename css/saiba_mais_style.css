@@ -40,6 +40,13 @@ a {
 
     align-items: center;
     justify-content:space-between;
+    
+    -webkit-transition: 0ms;
+    transition: 200ms;
+}
+
+.cabecalho:hover {
+    height: 6.3vh;
 }
 
 .coerg {
