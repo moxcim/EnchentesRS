@@ -29,7 +29,7 @@ a {
 .cabecalho {
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: absolute;
 
     background-color: #4f0000;
     color:burlywood;
@@ -43,10 +43,6 @@ a {
     
     -webkit-transition: 0ms;
     transition: 200ms;
-}
-
-.cabecalho:hover {
-    height: 6.3vh;
 }
 
 .coerg {
@@ -132,7 +128,7 @@ a {
 
 .drop {
   display: none;
-  position: fixed;
+  position: absolute;
 
   padding-top: 10px;
 
@@ -165,7 +161,10 @@ a {
   border: 0px;
   margin-bottom: 10px;
   color: burlywood;
-  width: 5vw;
+}
+
+.btn:hover {
+  text-decoration: underline;
 }
 
 .corpo {
@@ -255,4 +254,37 @@ a {
   .ajude:hover {
       letter-spacing: 15px;
   }
+
+  .doacoes {
+    display: flex;
+    flex-direction: column;
+
+    width: 90vw;
+    height: 80vh;
+
+    align-items: center;
+  }
+
+  .doa {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 90vw;
+    margin-bottom: 10vh;
+  }
+
+  .QR {
+    height: 30vw;
+    border-radius: 5px;
+
+    -webkit-transition: 0ms;
+    transition: 300ms;
+  }
+
+  .QR:hover {
+    box-shadow: #3b0000 0px 0px 40px;
+  }
 }
+

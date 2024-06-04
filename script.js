@@ -10,3 +10,15 @@ function onClick(){
         anchor = 0
     }
 }
+
+window.addEventListener("load", init);
+
+function scroll() {
+    document.getElementById('anchor1').scrollIntoView ({
+        behavior:"smooth"
+    });
+}
+
+function init() {
+    document.getElementById('1').addEventListener("click", scroll);
+}
