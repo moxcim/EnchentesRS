@@ -243,7 +243,7 @@ a {
     display: flex;
     flex-direction: column;
 
-    height: 150vh;
+    height: 140vh;
     align-items: center;
 
     background-color: #4f0000;
@@ -472,6 +472,7 @@ a {
     }
 
     .container1 {
+        margin-top: 0;
         margin-left: 0;
         width: 80vw;
     }
