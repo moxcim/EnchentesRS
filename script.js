@@ -10,12 +10,3 @@ function onClick(){
         anchor = 0
     }
 }
-
-function scrollTo(elementId) {
-    var element = document.getElementById(elementId);
-    element.scrollIntoView({ behavior: 'smooth' });
-}
-
-document.getElementById('btn_sobre').addEventListener('click', function() {
-    scrollToElement(getElementById('1'));
-});
